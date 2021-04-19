@@ -1,12 +1,14 @@
 {
+  "homepage": "https://github.com/Ramzes-org/ReactShoppingCartDemo",
   "name": "react-shopping-cart",
   "version": "0.1.0",
   "description": "Simple react shopping cart without using redux",
   "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
-    "build": "SET NODE_ENV=production & webpack --config=config/webpack.prod.js"
-   
+    "build": "SET NODE_ENV=production & webpack --config=config/webpack.prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "reactjs",
@@ -15,17 +17,16 @@
   ],
   "author": "Andrii Kvach",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "axios": "^0.16.1",
+    "cors": "^2.8.5",
     "cross-env": "^7.0.3",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
     "react-custom-scrollbars": "^4.1.1",
     "react-dom": "^16.0.0",
-    "react-transition-group": "^1.1.2"
-  },
-  "devDependencies": {
+    "react-transition-group": "^1.1.2",
     "autoprefixer": "^8.6.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -34,17 +35,19 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.19",
-    "css-loader": "^0.28.11",
+    "clean-webpack-plugin": "^2.0.0",
+    "css-loader": "^2.0.0",
     "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^1.1.11",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.0",
-    "mini-css-extract-plugin": "^0.4.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.14.1",
-    "optimize-css-assets-webpack-plugin": "^4.0.2",
-    "postcss-loader": "^2.1.5",
-    "sass-loader": "^7.0.3",
-    "style-loader": "^0.21.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
     "webpack": "^4.12.0",

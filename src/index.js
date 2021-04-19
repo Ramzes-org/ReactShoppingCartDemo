@@ -35,7 +35,7 @@ class App extends Component {
 
   // Fetch Initial Set of Products from external API
   getProducts() {
-    let url = "http://my-json-server.typicode.com/Ramzes-org/FackeJson/db";
+    let url = "https://my-json-server.typicode.com/Ramzes-org/FackeJson/db";
     axios.get(url).then(response => {
       this.setState({
         data: [...response.data.products],
@@ -96,7 +96,7 @@ class App extends Component {
         break;
       default: 
         prod = this.state.data;
-        this.filterBySize()
+        this.filterBySize();
         return;
     }
     this.setState({products: prod})
