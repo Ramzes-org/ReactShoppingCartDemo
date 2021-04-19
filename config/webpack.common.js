@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV == 'production';
-console.log(devMode)
+
 module.exports = {
 	resolve: {
 		modules: [path.resolve(__dirname, '../src'), 'node_modules']
